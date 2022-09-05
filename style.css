@@ -1,0 +1,327 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+section
+{
+    height: 100vh;
+    background: #000;   
+}
+section:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #f00,#f00,#0f0,#0ff,#ff0,#0ff);
+    mix-blend-mode: color;
+    pointer-events: none;
+}
+video
+{
+    object-fit: cover;
+}
+h1
+{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #ddd;
+    font-size: 3em;
+    font-family: 'Baloo Bhai', cursive;
+    letter-spacing: 0.010em;
+    opacity: 100;
+}
+h1 span
+{
+    opacity: 0;
+    display: inline-block;
+    animation: animate 1s linear forwards;
+}
+@keyframes animate
+{
+    0%
+    {
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0px);
+    }
+}
+h1 span:nth-child(1)
+{
+    animation-delay: 1s;
+}
+h1 span:nth-child(2)
+{
+    animation-delay: 2s;
+}
+h1 span:nth-child(3)
+{
+    animation-delay: 2.25s;
+}
+h1 span:nth-child(4)
+{
+    animation-delay: 2.5s;
+}
+h1 span:nth-child(5)
+{
+    animation-delay: 2.75s;
+}
+h1 span:nth-child(6)
+{
+    animation-delay: 3s;
+}
+h1 span:nth-child(7)
+{
+    animation-delay: 3.25s;
+}
+h1 span:nth-child(8)
+{
+    animation-delay: 3.5s;
+}
+h1 span:nth-child(9)
+{
+    animation-delay: 3.75s;
+}
+h1 span:nth-child(10)
+{
+    animation-delay: 4s;
+}
+h1 span:nth-child(11)
+{
+    animation-delay: 4.25s;
+}
+h1 span:nth-child(12)
+{
+    animation-delay: 4.5s;
+}
+h1 span:nth-child(13)
+{
+    animation-delay: 4.75s;
+}
+h1 span:nth-child(14)
+{
+    animation-delay: 5s;
+}
+h1 span:nth-child(15)
+{
+    animation-delay: 5.25s;
+}
+h1 span:nth-child(16)
+{
+    animation-delay: 5.5s;
+}
+h1 span:nth-child(17)
+{
+    animation-delay: 5.75s;
+}
+h1 span:nth-child(18)
+{
+    animation-delay: 6s;
+}
+h1 span:nth-child(19)
+{
+    animation-delay: 6.25s;
+}
+h1 span:nth-child(20)
+{
+    animation-delay: 6.5s;
+}
+h1 span:nth-child(21)
+{
+    animation-delay: 6.75s;
+}
+h1 span:nth-child(22)
+{
+    animation-delay: 7s;
+}
+
+
+
+
+
+
+.teachersdayCard{
+  position: relative;
+  width: 250px;
+  height: 350px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 1s;
+}
+
+.teachersdayCard:hover {
+  transform: perspective(2500px) rotate(5deg);
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+    0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.teachersdayCard:hover .cardFront {
+  transform: rotateY(-160deg);
+}
+
+.teachersdayCard:hover .happy {
+  visibility: hidden;
+}
+
+.cardFront {
+  position: relative;
+  background-color: #fff;
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+    30px 0 50px rgba(0, 0, 0, 0.4);
+  transition: 0.6s;
+}
+
+.happy {
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  margin: 30px;
+  background-image: linear-gradient(120deg, #ffd856 0%, #f98c6e 100%);
+  transition: 0.1s;
+
+}
+  .balloons {
+  position: absolute;
+}
+
+.balloon-1,
+.balloon-2,
+.balloon-3,
+.balloon-4 {
+  position: absolute;
+  width: 85px;
+  height: 95px;
+  border-radius: 50%;
+}
+
+.balloon-1 {
+  background-color: rgba(255, 40, 90, 0.7);
+  left: -10px;
+  top: 50px;
+}
+
+.balloon-2 {
+  background-color: rgba(9, 215, 160, 0.7);
+  left: 50px;
+  top: 20px;
+}
+
+.balloon-3 {
+  background-color: rgba(255, 186, 26, 0.7);
+  left: 110px;
+  top: 50px;
+}
+
+.balloon-4 {
+  background-color: rgba(12, 122, 159, 0.7);
+  left: 170px;
+  top: 50px;
+}
+
+.balloon-1::before,
+.balloon-2::before,
+.balloon-3::before,
+.balloon-4::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 155px;
+  background-color: #ffc848;
+  top: 95px;
+  left: 43px;
+}
+
+.balloon-1::after,
+.balloon-2::after,
+.balloon-3::after,
+.balloon-4::after {
+  content: "";
+  position: absolute;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  top: 94px;
+  left: 37px;
+}
+
+.balloon-1::after {
+  border-bottom: 10px solid #ff3e6b;
+}
+
+.balloon-2::after {
+  border-bottom: 10px solid #04b183;
+}
+
+.balloon-3::after {
+  border-bottom: 10px solid #ffc94c;
+}
+
+.balloon-4::after {
+  border-bottom: 10px solid #13a9bd;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cardInside {
+  position: absolute;
+  background-color: #fff;
+  width: 250px;
+  height: 350px;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  font-family: "Brush Script MT", cursive;
+  margin: 20px;
+  color: #333;
+   font-size: smaller;
+}
+
+
+.back {
+  font-family: Tahoma, sans-serif;
+  color: #333;
+  text-align: center;
+  margin: 30px;
+  outline-color: #333;
+  outline-style: dotted;
+}
+
+  
